@@ -1,6 +1,4 @@
 
-let parola: string;
-
 interface ISmartphone {
     carica: number;
     numeroChiamate: number;
