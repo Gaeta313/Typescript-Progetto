@@ -1,8 +1,16 @@
 
+///////////////////////// INIZIO TRACCIA ESERCIZIO ////////////////////////
+
+
 interface ISmartphone {
     carica: number;
     numeroChiamate: number;
 
+    ricarica(unaRicarica: number): void;
+    chiamata(minutiDurata: number): void;
+    numero404(): number;
+    getNumeroChiamate(): number;
+    azzeraChiamate(): void;
 }
 
 class User implements ISmartphone {
@@ -10,6 +18,7 @@ class User implements ISmartphone {
     numeroChiamate: number;
     nome: string;
     cognome: string;
+
     constructor(nome: string, cognome: string) {
         this.nome = nome;
         this.cognome = cognome;
@@ -63,8 +72,9 @@ console.log(FirstUser.numero404());
 FirstUser.azzeraChiamate();
 console.log(FirstUser.getNumeroChiamate());
 
+////////////////////////////// FINE TRACCIA ESERCIZIO ////////////////////////////////////////
 
-////////////////////////Tutto il codice che segue serve a generare la parte html della pagina/////////////////////
+////////////////////////Tutto il codice che segue serve a generare la parte html della pagina /////////////////////
 
 //function per stampare lo smartphone dell'utente
 function stampaSmart(utente: User): void {
@@ -151,13 +161,13 @@ function effetuaChiamata(utente: User): void {
         let valore: number = +input.value;
         input.value = '';
         if (valore > 0) {
-            if(valore *0.20 < utente.numero404()){
-            costo.innerHTML = String((valore*0.20).toFixed(2)) + '€';
-            utente.chiamata(valore);
-            credito.innerText = String(utente.numero404()) + '€';
-            chiamate.innerText = String(utente.getNumeroChiamate());
+            if (valore * 0.20 < utente.numero404()) {
+                costo.innerHTML = String((valore * 0.20).toFixed(2)) + '€';
+                utente.chiamata(valore);
+                credito.innerText = String(utente.numero404()) + '€';
+                chiamate.innerText = String(utente.getNumeroChiamate());
             }
-            else{
+            else {
                 esito.style.display = 'block';
                 esito.innerText = 'Errore, il credito residuo non copre il costo della chiamata';
                 setTimeout(() => {
@@ -180,10 +190,10 @@ function effetuaChiamata(utente: User): void {
     }
 }
 
-function azzeraChiamate(utente:User):void{
+function azzeraChiamate(utente: User): void {
     let chiamate: HTMLElement | null = document.querySelector('#chiamate');
     let costo: HTMLElement | null = document.querySelector('#costo');
-    if(chiamate!= null && costo != null){
+    if (chiamate != null && costo != null) {
         utente.azzeraChiamate()
         costo.innerHTML = '';
         chiamate.innerHTML = String(utente.getNumeroChiamate());

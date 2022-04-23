@@ -1,5 +1,5 @@
 "use strict";
-let parola;
+///////////////////////// INIZIO TRACCIA ESERCIZIO ////////////////////////
 class User {
     constructor(nome, cognome) {
         this.nome = nome;
@@ -48,7 +48,8 @@ FirstUser.chiamata(120);
 console.log(FirstUser.numero404());
 FirstUser.azzeraChiamate();
 console.log(FirstUser.getNumeroChiamate());
-////////////////////////Tutto il codice che segue serve a generare la parte html della pagina/////////////////////
+////////////////////////////// FINE TRACCIA ESERCIZIO ////////////////////////////////////////
+////////////////////////Tutto il codice che segue serve a generare la parte html della pagina /////////////////////
 //function per stampare lo smartphone dell'utente
 function stampaSmart(utente) {
     let table = document.querySelector('#table');
