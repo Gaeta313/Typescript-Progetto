@@ -64,6 +64,7 @@ let FirstUser: User = new User('Mario', 'Rossi');
 let SecondUser: User = new User('Giuseppe', 'Verdi');
 let ThirdUser: User = new User('Filippo', 'Neri');
 
+//PROVE EFFETTUATE
 FirstUser.ricarica(30);
 console.log(FirstUser);
 FirstUser.chiamata(10);
