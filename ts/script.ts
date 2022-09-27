@@ -88,7 +88,7 @@ function stampaSmart(utente: User): void {
        <h2> ${utente.nome} ${utente.cognome} </h2>
         <h6>Credito residuo : <span id="credito" class='text-danger'>${utente.numero404()} €</span></h6>
         <h6>Chiamate Effetuate : <span id="chiamate" class='text-success'>${utente.getNumeroChiamate()}</span></h6>
-        <h6>Costo Ultima Chiamata : <span id="costo" class='text-warning'></span></h6>
+        <h6>Costo Ultima Chiamata : <span id="costo" class='text-danger'></span></h6>
 
         <div class="flex-nowrap mt-5">
             <button id='ricarica' class="btn btn-success ">Effetua Ricarica</button>
